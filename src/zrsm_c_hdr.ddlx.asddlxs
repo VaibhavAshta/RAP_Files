@@ -1,0 +1,46 @@
+@Metadata.layer: #PARTNER
+
+@UI.headerInfo: {
+    typeName: 'User Header',
+    typeNamePlural: 'User',
+
+    title: {
+        type: #STANDARD,
+        value: 'Userid'
+    },
+
+    description: {
+        type: #STANDARD,
+        value: 'Fname'
+    }
+}
+
+annotate entity ZRSM_C_HDR with
+{
+  @UI.facet: [{
+  id: 'Identification',
+  purpose: #STANDARD,
+  type: #IDENTIFICATION_REFERENCE,
+  label: 'User Details',
+  position: 10
+  }
+]
+
+  @UI.lineItem: [{ position: 10 }]
+  Userid;
+  
+  @UI.lineItem: [{ position: 30 }]
+  Fname;
+  
+  @UI.lineItem: [{ position: 40 }]
+  Lname;
+
+  @UI.lineItem: [{ position: 50 }]
+  Gender;
+  
+  @UI.lineItem: [{ position: 60 }]
+  Dob;
+  
+  @UI.lineItem: [{ position: 70 }]
+  Email;
+}

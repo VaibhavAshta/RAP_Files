@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition: User'
+define service ZRSM_UI_SO {
+  expose ZRSM_C_HDR as User;
+}
